@@ -1,0 +1,15 @@
+.about-grid { display: grid; grid-template-columns: 1.4fr 0.9fr; gap: clamp(1.5rem, 4vw, 3rem); align-items: start; }
+@media (max-width: 780px) { .about-grid { grid-template-columns: 1fr; } }
+.about-title { font-size: var(--step-3); margin: 0.9rem 0 1rem; }
+.about-lead { color: var(--text-soft); font-size: var(--step-1); max-width: 55ch; margin: 0 0 1rem; }
+
+.fun-facts {
+  list-style: none; margin: 0; padding: 1.4rem;
+  background: var(--teal); color: #06302b;
+  border: 2.5px solid var(--line); border-radius: var(--radius);
+  box-shadow: var(--shadow); transform: rotate(1.5deg);
+  display: flex; flex-direction: column; gap: 0.7rem;
+}
+.fun-facts-title { font-family: var(--font-display); font-weight: 800; font-size: var(--step-1); }
+.fun-fact { font-weight: 600; padding-left: 1.4rem; position: relative; }
+.fun-fact::before { content: '→'; position: absolute; left: 0; }

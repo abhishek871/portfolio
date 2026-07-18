@@ -1,0 +1,84 @@
+/* ========================================================================
+   Design tokens — "Playful & Creative" identity
+   Warm cream ground, bold ink, hot-pink / teal / sunshine accents,
+   hard offset shadows, sticker energy.
+   ======================================================================== */
+:root {
+  /* Neutrals — cream, biased slightly warm (chosen, not default grey) */
+  --cream: #fff4e6;
+  --cream-2: #ffe9d0;
+  --paper: #ffffff;
+  --ink: #241c14;
+  --ink-soft: #5c5347;
+  --line: #241c14;
+
+  /* Accents */
+  --pink: #ff5d8f;
+  --teal: #12b8a6;
+  --yellow: #ffd23f;
+  --violet: #8b5cf6;
+
+  /* Semantic */
+  --bg: var(--cream);
+  --surface: var(--paper);
+  --text: var(--ink);
+  --text-soft: var(--ink-soft);
+  --accent: var(--pink);
+
+  /* Hard offset shadows (the signature "sticker" look) */
+  --shadow-sm: 3px 3px 0 var(--ink);
+  --shadow: 6px 6px 0 var(--ink);
+  --shadow-teal: 6px 6px 0 var(--teal);
+  --shadow-pink: 6px 6px 0 var(--pink);
+  --shadow-yellow: 6px 6px 0 var(--yellow);
+
+  /* Type */
+  --font-display: "Poppins", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
+
+  /* Scale */
+  --step--1: clamp(0.83rem, 0.8rem + 0.2vw, 0.94rem);
+  --step-0: clamp(1rem, 0.95rem + 0.25vw, 1.13rem);
+  --step-1: clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem);
+  --step-2: clamp(1.6rem, 1.4rem + 1vw, 2.1rem);
+  --step-3: clamp(2.1rem, 1.7rem + 2vw, 3rem);
+  --step-4: clamp(2.7rem, 2rem + 3.5vw, 4.5rem);
+
+  /* Layout */
+  --radius: 18px;
+  --radius-lg: 28px;
+  --maxw: 1080px;
+  --gap: clamp(1rem, 2vw, 1.5rem);
+
+  color-scheme: light dark;
+}
+
+/* Dark theme — keep it playful, not just inverted: deep espresso ground */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --cream: #1a1410;
+    --cream-2: #241c16;
+    --paper: #26201a;
+    --ink: #ffefe0;
+    --ink-soft: #c2b3a3;
+    --line: #4a3d30;
+    --shadow-sm: 3px 3px 0 #0d0a07;
+    --shadow: 6px 6px 0 #0d0a07;
+    --shadow-teal: 6px 6px 0 var(--teal);
+    --shadow-pink: 6px 6px 0 var(--pink);
+    --shadow-yellow: 6px 6px 0 #c99a1f;
+  }
+}
+:root[data-theme="light"] {
+  --cream: #fff4e6; --cream-2: #ffe9d0; --paper: #ffffff;
+  --ink: #241c14; --ink-soft: #5c5347; --line: #241c14;
+  --shadow-sm: 3px 3px 0 var(--ink); --shadow: 6px 6px 0 var(--ink);
+  --shadow-yellow: 6px 6px 0 var(--yellow);
+}
+:root[data-theme="dark"] {
+  --cream: #1a1410; --cream-2: #241c16; --paper: #26201a;
+  --ink: #ffefe0; --ink-soft: #c2b3a3; --line: #4a3d30;
+  --shadow-sm: 3px 3px 0 #0d0a07; --shadow: 6px 6px 0 #0d0a07;
+  --shadow-yellow: 6px 6px 0 #c99a1f;
+}

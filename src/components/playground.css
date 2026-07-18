@@ -1,0 +1,22 @@
+.project-grid {
+  display: grid; gap: clamp(1.4rem, 3vw, 2.2rem);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+}
+.project-card { padding: 1.5rem; display: flex; flex-direction: column; gap: 0.7rem; }
+.project-top { display: flex; align-items: center; justify-content: space-between; }
+.project-emoji { font-size: 2.2rem; }
+.project-badge {
+  font-family: var(--font-mono); font-size: var(--step--1); font-weight: 700;
+  background: var(--yellow); color: var(--ink);
+  padding: 3px 10px; border: 2px solid var(--line); border-radius: 999px;
+  transform: rotate(2deg);
+}
+.project-card h3 { font-size: var(--step-2); }
+.project-blurb { margin: 0; color: var(--text-soft); }
+.project-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: auto; }
+.tag-chip {
+  font-size: var(--step--1); font-weight: 600;
+  background: var(--cream-2); color: var(--text);
+  padding: 3px 10px; border: 2px solid var(--line); border-radius: 999px;
+}
+.project-link { font-weight: 700; text-decoration: none; margin-top: 0.4rem; width: fit-content; border-bottom: 2px solid var(--pink); }

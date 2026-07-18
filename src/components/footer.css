@@ -1,0 +1,5 @@
+.footer { border-top: 2.5px solid var(--line); padding: 2.2rem 0; margin-top: 2rem; }
+.footer-inner { display: flex; flex-direction: column; gap: 0.8rem; align-items: center; text-align: center; }
+.footer-legend { display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; justify-content: center; color: var(--text-soft); font-size: var(--step--1); margin: 0; }
+.cursor-chip { font-family: var(--font-mono); font-weight: 700; background: var(--pink); color: #fff; padding: 2px 8px; border-radius: 6px; border: 2px solid var(--line); }
+.footer-credit { color: var(--text-soft); font-size: var(--step--1); margin: 0; }

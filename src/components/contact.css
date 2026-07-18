@@ -1,0 +1,18 @@
+.contact-card {
+  position: relative; overflow: hidden;
+  background: var(--ink); color: var(--cream);
+  border: 2.5px solid var(--line); border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-pink);
+  padding: clamp(1.8rem, 5vw, 3.2rem);
+  text-align: center;
+  display: flex; flex-direction: column; align-items: center; gap: 1rem;
+}
+.contact-card .eyebrow { color: var(--ink); }
+.contact-title { font-size: var(--step-3); max-width: 18ch; }
+.contact-sub { color: color-mix(in srgb, var(--cream) 78%, transparent); font-size: var(--step-1); max-width: 46ch; margin: 0; position: relative; z-index: 1; }
+.link-btn { background: none; border: none; color: var(--yellow); font: inherit; cursor: pointer; text-decoration: underline wavy var(--yellow); text-underline-offset: 4px; padding: 0; }
+.contact-actions { display: flex; flex-wrap: wrap; gap: 0.8rem; justify-content: center; position: relative; z-index: 1; }
+.contact-card .btn { box-shadow: var(--shadow-yellow); }
+.contact-card .btn:hover { box-shadow: 9px 9px 0 var(--yellow); }
+.socials { display: flex; gap: 1.2rem; margin-top: 0.6rem; position: relative; z-index: 1; }
+.social-link { font-weight: 700; text-decoration: none; border-bottom: 2px solid var(--teal); }
