@@ -10,9 +10,13 @@
 .hero .wave { font-size: clamp(2.2rem, 6vw, 3rem); transform-origin: 70% 70%; }
 .hero h1 { font-size: var(--step-4); }
 
-/* Hero headline highlight: two-tone colored text */
-.tone-fun { color: var(--pink); font-style: italic; }
-.tone-fast { color: var(--teal); text-decoration: underline wavy var(--teal); text-underline-offset: 8px; text-decoration-thickness: 3px; }
+/* Hero headline highlight: sticker chips (V3) */
+.chip-fun, .chip-fast {
+  display: inline-block; padding: 0 0.28em; border-radius: 12px;
+  border: 3px solid var(--line); font-size: 0.9em; line-height: 1.15;
+}
+.chip-fun { background: var(--pink); color: #fff; transform: rotate(-3deg); box-shadow: var(--shadow-sm); }
+.chip-fast { background: var(--yellow); color: var(--ink); transform: rotate(2deg); box-shadow: var(--shadow-sm); }
 .hero-sub { color: var(--text-soft); font-size: var(--step-1); max-width: 40ch; margin: 0; }
 .hero-cta { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 0.4rem; }
 

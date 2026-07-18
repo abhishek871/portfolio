@@ -39,7 +39,7 @@ export default function Hero() {
             transition={{ ...spring, delay: 0.12 }}
           >
             Hey, I'm {profile.firstName} — I make the web{' '}
-            <span className="tone-fun">fun</span> &amp; <span className="tone-fast">fast</span>.
+            <span className="chip-fun">fun</span> &amp; <span className="chip-fast">fast</span>.
           </motion.h1>
 
           <motion.p

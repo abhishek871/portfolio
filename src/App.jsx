@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { lazy, Suspense, useEffect, useState } from 'react'
 import Nav from './components/Nav.jsx'
 import Hero from './components/Hero.jsx'
 import Playground from './components/Playground.jsx'
@@ -7,9 +7,12 @@ import Skills from './components/Skills.jsx'
 import Timeline from './components/Timeline.jsx'
 import Contact from './components/Contact.jsx'
 import Footer from './components/Footer.jsx'
-import ChatBot from './components/ChatBot.jsx'
-import Presence from './components/Presence.jsx'
 import './styles/app.css'
+
+// Lazy-loaded: these pull heavier deps (Supabase realtime, chat logic) that
+// aren't needed for first paint. Splitting them keeps the initial bundle lean.
+const Presence = lazy(() => import('./components/Presence.jsx'))
+const ChatBot = lazy(() => import('./components/ChatBot.jsx'))
 
 function getInitialTheme() {
   const saved = typeof localStorage !== 'undefined' && localStorage.getItem('theme')
@@ -42,7 +45,9 @@ export default function App() {
   return (
     <>
       <a href="#main" className="sr-only">Skip to content</a>
-      <Presence />
+      <Suspense fallback={null}>
+        <Presence />
+      </Suspense>
       <Nav onToggleTheme={toggleTheme} />
       <main id="main">
         <Hero />
@@ -53,7 +58,9 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
-      <ChatBot />
+      <Suspense fallback={null}>
+        <ChatBot />
+      </Suspense>
     </>
   )
 }
