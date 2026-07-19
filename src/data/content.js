@@ -44,6 +44,16 @@ export const projects = [
     accent: 'pink',
   },
   {
+    title: 'Properties Tab (React Native)',
+    emoji: '🏠',
+    blurb:
+      'Developed a new Properties Tab on the project detail page in React Native (mobile site + apps), with advanced filtering and rich UI — boosting session duration 8–10%.',
+    tags: ['React Native', 'Filtering', 'Mobile UI'],
+    highlight: '+5% CTR',
+    link: '',
+    accent: 'yellow',
+  },
+  {
     title: '40% Faster App Load',
     emoji: '🚀',
     blurb:
@@ -99,7 +109,7 @@ export const projects = [
 export const skillGroups = [
   { title: 'Languages', items: ['JavaScript', 'TypeScript', 'C/C++', 'Java', 'HTML', 'CSS', 'SASS'] },
   { title: 'Frontend', items: ['React.js', 'React Native', 'Micro-Frontends', 'Module Federation', 'SSR', 'Code-Splitting'] },
-  { title: 'Testing', items: ['Jest', 'Playwright', 'React Testing Library', 'Unit / Integration'] },
+  { title: 'Testing', items: ['Jest', 'Playwright', 'Unit / Integration'] },
   { title: 'Tooling & CI/CD', items: ['Git', 'GitLab CI/CD', 'Webpack', 'Vite', 'Babel', 'Figma'] },
   { title: 'AI & Monitoring', items: ['Claude Code', 'GitHub Copilot', 'RUM', 'Kibana', 'Google Analytics'] },
 ]
@@ -166,7 +176,7 @@ WHAT I DID AT INDIAMART (Software Engineer, Feb 2022 – Nov 2024)
 SKILLS
 Languages: JavaScript, TypeScript, C/C++, Java (basic), HTML, CSS, SASS.
 Frontend: React.js, React Native, Micro-Frontends, Module Federation, SSR, Code-Splitting, WCAG accessibility.
-Testing: Jest, Playwright, React Testing Library.
+Testing: Jest, Playwright.
 Tooling: Git, GitLab CI/CD, Webpack, Vite, Babel, Figma, JIRA, Postman.
 AI & Monitoring: Claude Code, GitHub Copilot, RUM, Kibana, Google Search Console, Google Analytics.
 

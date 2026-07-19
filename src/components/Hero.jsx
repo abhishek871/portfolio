@@ -74,9 +74,9 @@ export default function Hero() {
           transition={{ ...spring, delay: 0.24 }}
           whileHover={{ rotate: 0, y: -4 }}
         >
-          <div className="hero-card-emoji" aria-hidden="true">🚀</div>
+          <div className="hero-card-emoji" aria-hidden="true">🏠</div>
           <div className="hero-card-label">Latest ship</div>
-          <p className="hero-card-text">Rebuilt 99acres search — <b>40% faster</b>.</p>
+          <p className="hero-card-text">New Properties Tab on 99acres — <b>+5% CTR</b>.</p>
           <div className="hero-stats">
             {profile.stats.map((s) => (
               <div key={s.label}>

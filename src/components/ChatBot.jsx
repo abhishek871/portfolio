@@ -34,6 +34,23 @@ export default function ChatBot() {
     if (open) inputRef.current?.focus()
   }, [open])
 
+  // Lock background page scroll while the chat is open — MOBILE ONLY.
+  // On wider screens the chat is a small floating panel, so we let the page
+  // keep scrolling behind it. On mobile it's ~full-screen, so we lock it.
+  useEffect(() => {
+    if (!open) return
+    if (!window.matchMedia('(max-width: 640px)').matches) return
+    const scrollbar = window.innerWidth - document.documentElement.clientWidth
+    const prevOverflow = document.body.style.overflow
+    const prevPad = document.body.style.paddingRight
+    document.body.style.overflow = 'hidden'
+    if (scrollbar > 0) document.body.style.paddingRight = `${scrollbar}px`
+    return () => {
+      document.body.style.overflow = prevOverflow
+      document.body.style.paddingRight = prevPad
+    }
+  }, [open])
+
   useEffect(() => {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: 'smooth' })
   }, [messages, busy])

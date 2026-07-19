@@ -10,7 +10,20 @@
 .contact-card .eyebrow { color: var(--ink); }
 .contact-title { font-size: var(--step-3); max-width: 18ch; }
 .contact-sub { color: color-mix(in srgb, var(--cream) 78%, transparent); font-size: var(--step-1); max-width: 46ch; margin: 0; position: relative; z-index: 1; }
-.link-btn { background: none; border: none; color: var(--yellow); font: inherit; cursor: pointer; text-decoration: underline wavy var(--yellow); text-underline-offset: 4px; padding: 0; }
+.link-btn {
+  display: inline-block;
+  background: var(--yellow); color: var(--ink);
+  border: 2.5px solid var(--ink);
+  border-radius: 10px;
+  padding: 1px 9px;
+  font: inherit; font-weight: 800; line-height: 1.35;
+  cursor: pointer;
+  box-shadow: 3px 3px 0 var(--pink);
+  transform: rotate(-2deg);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.link-btn:hover { transform: translate(-1px, -1px) rotate(-2deg); box-shadow: 5px 5px 0 var(--pink); }
+.link-btn:active { transform: translate(2px, 2px) rotate(-2deg); box-shadow: 1px 1px 0 var(--pink); }
 .contact-actions { display: flex; flex-wrap: wrap; gap: 0.8rem; justify-content: center; position: relative; z-index: 1; }
 .contact-card .btn { box-shadow: var(--shadow-yellow); }
 .contact-card .btn:hover { box-shadow: 9px 9px 0 var(--yellow); }
