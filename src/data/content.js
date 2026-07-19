@@ -25,7 +25,7 @@ export const profile = {
   email: 'abhishekjnv1999@gmail.com',
   socials: [
     { label: 'GitHub', url: 'https://github.com/abhishek871', icon: 'github' },
-    { label: 'LinkedIn', url: 'https://linkedin.com/in/abhishek-chaudhary', icon: 'linkedin' },
+    { label: 'LinkedIn', url: 'https://www.linkedin.com/in/abhishek-chaudhary-4894ab196', icon: 'linkedin' },
     { label: 'LeetCode', url: 'https://leetcode.com/acjnv2000', icon: 'leetcode' },
     { label: 'Email', url: 'mailto:abhishekjnv1999@gmail.com', icon: 'mail' },
   ],
