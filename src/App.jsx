@@ -1,4 +1,6 @@
 import { lazy, Suspense, useEffect, useState } from 'react'
+import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/react'
 import Nav from './components/Nav.jsx'
 import Hero from './components/Hero.jsx'
 import Playground from './components/Playground.jsx'
@@ -61,6 +63,9 @@ export default function App() {
       <Suspense fallback={null}>
         <ChatBot />
       </Suspense>
+      {/* Vercel Web Analytics (visitors + referrers) and Speed Insights (RUM) */}
+      <Analytics />
+      <SpeedInsights />
     </>
   )
 }
